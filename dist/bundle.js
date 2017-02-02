@@ -68,15 +68,24 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "Hello, Webpack"; //When someone requires you, give them this string
+"use strict";
+
+
+var msg = "Hello, Webpack"; //const is ES2015 (we need a loader to transform this to javascrip
+//the browser understands)
+
+module.exports = msg; //When someone requires you, give them this string
 
 /***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var message = __webpack_require__(0);  //Get the string out of script2
+"use strict";
+
+
+var message = __webpack_require__(0); //Get the string out of script2
 
 console.log(message);
 
