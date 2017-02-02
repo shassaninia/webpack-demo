@@ -18,7 +18,15 @@ module.exports = {
             query: {
                 presets: ["es2015"] //Speciifies what code we want to translate (in this case es2015)
             }
-        }]
+        },
+
+        //style and css loader
+        {
+            test: /\.css$/, //only run on css files,
+            loader:"style-loader!css-loader" //use style and css loader (notice ! to use them together)
+        }
+        
+        ]
     }
 
 }
