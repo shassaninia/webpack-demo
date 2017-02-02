@@ -1,0 +1,1 @@
+module.exports = "Hello, Webpack"; //When someone requires you, give them this string
